@@ -1,27 +1,29 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    display: flex;
-`;
+    display: flex
+`
 
 const Pane = styled.div`
-    flex: ${props => props.weight};
-`;
+    flex: ${props => props.weight}
+`
 
-export const SplitScreen = ({
+export default function SplitScreen({
     children,
-    leftWeight=1, 
-    rightWeight=1
-}) => {
-    const [left, right] = children;
-    return (
-        <Container >
-            <Pane weight={leftWeight}>
-                {left}
-            </Pane>
-            <Pane weight={rightWeight}>
-                {right}
-            </Pane>
-        </Container>
-    );
+    leftWeight=1,
+    rightWeight=1,
+}) {
+  const [left, right] = children;
+  return (
+    <Container>
+        <Pane weight={leftWeight}>
+            {left}
+        </Pane>
+        <Pane weight={rightWeight}>
+            {right}
+        </Pane>
+    </Container>
+  )
 }
+
+
