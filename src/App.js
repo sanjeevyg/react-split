@@ -1,12 +1,7 @@
 import React from 'react'
 import SplitScreen from './SplitScreen'
-
-const LeftHandComponent = ({name}) => {
-    return <h1 style={{background: "red"}}>{name}</h1>
-}
-const RightHandComponent = ({role}) => {
-    return <h1 style={{background: "green"}}>{role}</h1>
-}
+import LeftHandComponent from './Components/LeftHandComponent'
+import RightHandComponent from './Components/RightHandComponent'
 
 export default function App() {
   return (
